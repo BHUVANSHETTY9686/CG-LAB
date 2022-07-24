@@ -7,16 +7,13 @@
 #define Pi 3.1416
 
 
-int choice = 0;
+int choice = 0,c[4],k,n=3,inc;
 int cp[4][2] = { {20,100},
 		 {30,110},
 		 {50,90},
 		 {60,100}};
-int inc;
-int c[4],k,n=3;
-float x,y,u,blend;
-float theta=0;
 
+float x,y,u,blend,theta=0;
 
 void main_menu(int c)
 {
