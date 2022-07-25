@@ -107,11 +107,11 @@ void CohenSutherlandLineClipAndDraw (double x0, double y0,double x1, double y1)
 
 if (accept)
 {                
-		glColor3f(1.0, 0.0, 0.0);
+		
 		glViewport(xvmin,yvmin,xvmax,yvmax);
+	
 		glPushMatrix();
 		glScalef(3,3,0);
-		glColor3f(1.0, 0.0, 0.0);
 		draw(x0,y0,x1,y1);
 		glPopMatrix();
 }
