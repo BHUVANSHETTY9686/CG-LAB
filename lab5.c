@@ -26,10 +26,14 @@ outcode ComputeOutCode (double x, double y)
 
 void draw(double x0, double y0,double x1, double y1)
 {
+	//this is for line passing
+	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_LINES);
 		glVertex2d (x0, y0);
 		glVertex2d (x1, y1);
-		glEnd();
+	glEnd();
+	
+	//this is for that window...
 	glColor3f(0.0, 0.0, 1.0);
 	glBegin(GL_LINE_LOOP);
   		glVertex2f(xmin, ymin);
@@ -117,9 +121,10 @@ void display()
 {
 	double x0=120,y0=10,x1=40,y1=130;
 	glClear(GL_COLOR_BUFFER_BIT);	
-	glColor3f(1.0,0.0,0.0);
-            draw(x0,y0,x1,y1);
+	
+        draw(x0,y0,x1,y1);
 	CohenSutherlandLineClipAndDraw(x0,y0,x1,y1);
+	
 	glFlush();
 }
 
